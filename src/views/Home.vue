@@ -1,18 +1,23 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
+<template></template>
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mapActions, mapGetters } from "vuex";
 
+// import Sidebar from "../components/Sidebar";
+// import AppBar from "../components/AppBar";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    // "sidebar-component": Sidebar,
+    // "appbar-component": AppBar,
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters("tasks", ["sidebarMenu"]),
+  },
+  methods: {
+    ...mapActions("tasks", ["logout", "updateSidebarMenu"]),
+  },
+};
 </script>
