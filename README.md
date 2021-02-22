@@ -1,5 +1,3 @@
-# frontend-how-am-i-doing
-
 ## Project setup
 ```
 npm install
